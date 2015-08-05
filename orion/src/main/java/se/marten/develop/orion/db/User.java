@@ -1,22 +1,23 @@
 package se.marten.develop.orion.db;
 
-public class User {
+import java.io.Serializable;
 
-	private Long id;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class User extends DBObject implements Serializable{
+
+	private static final long serialVersionUID = 7143420933332733888L;
 	private String name;
 	private String username;
 	private String password;
-	
+	 
 	public User(){}
 	
 	public String getName() {
 		return name;
-	}
-	public Long getId() {
-	      return id;
-	}
-	private void setId(Long id) {
-		this.id = id;
 	}
 	public void setName(String name) {
 		this.name = name;
