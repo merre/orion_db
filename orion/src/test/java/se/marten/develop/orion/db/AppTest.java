@@ -1,5 +1,9 @@
 package se.marten.develop.orion.db;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -35,4 +39,20 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    public static void main( String[ ] args ) {
+    	   
+        EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "hsqldb-ds" );
+        
+        EntityManager entitymanager = emfactory.createEntityManager( );
+        entitymanager.getTransaction( ).begin( );
+
+        User u = new User("adam","adamsuser","hejhej");
+        
+        entitymanager.persist(u);
+        entitymanager.flush();
+        entitymanager.getTransaction( ).commit( );
+        entitymanager.close( );
+        emfactory.close( );
+     }
 }
