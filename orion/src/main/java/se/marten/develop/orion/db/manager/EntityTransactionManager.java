@@ -1,7 +1,12 @@
 package se.marten.develop.orion.db.manager;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+
+import se.marten.develop.orion.db.User;
 
 
 public class EntityTransactionManager {
@@ -11,6 +16,11 @@ public class EntityTransactionManager {
 		em = EntityManagerUtil.getEntityManagerFactory().createEntityManager();
 	}
 	
+	public <T> Object getObjectById(long id, String namedQuery, Class<T> clazz){
+        TypedQuery<T> query =
+        		em.createNamedQuery(namedQuery, clazz).setParameter("id", id);
+        	  return query.getSingleResult();
+	}
 	
 	//TODO gather objects into one commit?
 	

@@ -11,6 +11,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import se.marten.develop.orion.db.manager.EntityTransactionManager;
+import se.marten.develop.orion.json.JsonHandler;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -48,24 +50,6 @@ public class AppTest
     }
     
     public static void main( String[ ] args ) {
-    	   
-        EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "hsqldb-ds" );
-//        
-        EntityManager entitymanager = emfactory.createEntityManager( );
-//        entitymanager.getTransaction( ).begin( );
-//
-//        User u = new User("adam","adamsuser","hejhej");
-//        
-//        entitymanager.persist(u);
-//        entitymanager.flush();
-//        entitymanager.getTransaction( ).commit( );
-//        entitymanager.close( );
-//        emfactory.close( );
-        
-        TypedQuery<User> query =
-        		entitymanager.createNamedQuery("User.findByName", User.class).setParameter("name", "adam");
-        	  List<User> users = query.getResultList();
-        	  User u = users.get(0);
-        	  System.out.println(u.getUsername());
+    	 JsonHandler.getShoppingListById(1);
      }
 }
