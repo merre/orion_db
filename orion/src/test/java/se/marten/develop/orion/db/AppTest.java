@@ -12,7 +12,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import se.marten.develop.orion.db.manager.EntityTransactionManager;
-import se.marten.develop.orion.json.JsonHandler;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -50,6 +49,6 @@ public class AppTest
     }
     
     public static void main( String[ ] args ) {
-    	 JsonHandler.getShoppingListById(1);
+    	 
      }
 }
