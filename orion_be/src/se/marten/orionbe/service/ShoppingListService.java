@@ -1,4 +1,4 @@
-package se.marten.orion.be.service;
+package se.marten.orionbe.service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import se.marten.orion.be.db.DbUtil;
-import se.marten.orion.be.pojo.ShoppingList;
+import se.marten.orionbe.db.DbUtil;
+import se.marten.orionbe.pojo.ShoppingList;
 
 	public class ShoppingListService {
 	 
@@ -23,7 +23,7 @@ import se.marten.orion.be.pojo.ShoppingList;
 	  try {
 	   PreparedStatement preparedStatement = connection.
 	     prepareStatement("select * from shoppinglist where owner=?");
-	   preparedStatement.setInt(2, userId);
+	   preparedStatement.setInt(1, userId);
 	   ResultSet rs = preparedStatement.executeQuery();
 	   
 	   while(rs.next()) {
