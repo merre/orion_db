@@ -15,9 +15,15 @@ import se.marten.orionbe.service.ShoppingListService;
 	 
 	 ShoppingListService slService = new ShoppingListService();
 	           
-	 @RequestMapping(value = "/{id}", method = RequestMethod.GET,headers="Accept=application/json")
-	 public List<ShoppingList> getShoppingListForUser(@PathVariable int id) {
-		 List<ShoppingList> list = slService.getListByUserId(id);
+	 @RequestMapping(value = "/{userid}", method = RequestMethod.GET,headers="Accept=application/json")
+	 public List<ShoppingList> getShoppingsListForUser(@PathVariable int userid) {
+		 List<ShoppingList> list = slService.getListByUserId(userid,0);
+		 return list;
+	 }
+	 
+	 @RequestMapping(value = "/{userid}/{listid}", method = RequestMethod.GET,headers="Accept=application/json")
+	 public List<ShoppingList> getShoppingsListForUser(@PathVariable int userid,@PathVariable int listid) {
+		 List<ShoppingList> list = slService.getListByUserId(listid,userid);
 		 return list;
 	 }
 	 
