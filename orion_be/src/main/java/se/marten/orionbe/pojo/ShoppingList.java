@@ -1,4 +1,4 @@
-package se.marten.orionbe.pojo;
+package main.java.se.marten.orionbe.pojo;
 
 public class ShoppingList {
 

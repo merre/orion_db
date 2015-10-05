@@ -1,4 +1,4 @@
-package se.marten.orionbe.service;
+package main.java.se.marten.orionbe.service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import se.marten.orionbe.db.DbUtil;
-import se.marten.orionbe.pojo.ShoppingList;
+import main.java.se.marten.orionbe.db.DbUtil;
+import main.java.se.marten.orionbe.pojo.ShoppingList;
+
 
 public class ShoppingListService {
 

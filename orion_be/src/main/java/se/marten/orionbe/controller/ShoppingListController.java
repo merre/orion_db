@@ -1,4 +1,4 @@
-package se.marten.orionbe.controller;
+package main.java.se.marten.orionbe.controller;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import se.marten.orionbe.pojo.ShoppingList;
-import se.marten.orionbe.service.ShoppingListService;
+import main.java.se.marten.orionbe.pojo.ShoppingList;
+import main.java.se.marten.orionbe.service.ShoppingListService;
 
 	@RestController
 	@RequestMapping("/shoppinglist")

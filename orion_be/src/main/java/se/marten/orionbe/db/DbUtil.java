@@ -1,4 +1,4 @@
-package se.marten.orionbe.db;
+package main.java.se.marten.orionbe.db;
 
 
 import java.io.FileNotFoundException;
