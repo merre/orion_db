@@ -10,22 +10,27 @@
 
 
     <dependencies>
+		<dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <version>8.1.9.v20130131</version>
+        </dependency>
 	</dependencies>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <build>
-        <plugins>
-    <plugin>
- 	 <groupId>org.eclipse.jetty</groupId>
-  <artifactId>jetty-maven-plugin</artifactId>
-  <version>9.0.5.v20130815</version>
-</plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+	    <plugins>
+		    <plugin>
+		 	 	<groupId>org.eclipse.jetty</groupId>
+		  		<artifactId>jetty-maven-plugin</artifactId>
+		  		<version>9.0.5.v20130815</version>
+			</plugin>
+		    <plugin>
+		         <groupId>org.springframework.boot</groupId>
+		         <artifactId>spring-boot-maven-plugin</artifactId>
+		     </plugin>
+	    </plugins>
     </build>
 </project>

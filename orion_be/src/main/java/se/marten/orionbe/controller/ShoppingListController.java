@@ -23,7 +23,7 @@ import main.java.se.marten.orionbe.service.ShoppingListService;
 	 
 	 @RequestMapping(value = "/{userid}/{listid}", method = RequestMethod.GET,headers="Accept=application/json")
 	 public List<ShoppingList> getShoppingsListForUser(@PathVariable int userid,@PathVariable int listid) {
-		 List<ShoppingList> list = slService.getListByUserId(listid,userid);
+		 List<ShoppingList> list = slService.getListByUserId(userid,listid);
 		 return list;
 	 }
 	 
